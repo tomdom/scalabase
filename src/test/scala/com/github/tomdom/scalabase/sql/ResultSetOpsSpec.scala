@@ -48,7 +48,7 @@ class ResultSetOpsSpec extends FlatSpec with MockitoSugar with Matchers {
 
     using(rs) { rs =>
       val s: Stream[String] = rs.toStream
-      assert(s.length === 3)
+      s.length shouldBe 3
       verify(rs, times(3)).getString(1)
     }
   }
@@ -67,7 +67,7 @@ class ResultSetOpsSpec extends FlatSpec with MockitoSugar with Matchers {
       verify(rs, times(1)).getString(1)
 
       for (rwi <- swi) {
-        assert(rwi._1 === "row_" + rwi._2)
+        rwi._1 shouldBe "row_" + rwi._2
         verify(rs, times(rwi._2)).getString(1)
       }
 
