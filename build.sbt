@@ -20,3 +20,5 @@ publishTo := {
   else
     Some(Resolver.file("file",  new File(tomdomMvn + "/releases")))
 }
+
+scalariformSettings
