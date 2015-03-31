@@ -2,11 +2,11 @@ organization := "com.github.tomdom"
 
 name := """scalabase"""
 
-version := "0.2-SNAPSHOT"
+version := "0.3-SNAPSHOT"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.6"
 
-crossScalaVersions := Seq("2.10.4", "2.11.5")
+crossScalaVersions := Seq("2.10.5", "2.11.6")
 
 libraryDependencies ++= Seq(
 	"org.scalatest" % "scalatest_2.11" % "2.2.4" % "test",
